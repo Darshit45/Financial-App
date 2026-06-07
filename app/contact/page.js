@@ -11,17 +11,26 @@ const details = [
   {
     icon: "pin",
     title: "Head Office",
-    lines: ["123 Financial District", "Mumbai 400001, India"],
+    lines: [{ text: "123 Financial District" }, { text: "Mumbai 400001, India" }],
   },
   {
     icon: "mail",
     title: "Email",
-    lines: ["hello@aaravwealth.example"],
+    lines: [
+      { text: "jigarmodi1992@gmail.com", href: "mailto:jigarmodi1992@gmail.com" },
+    ],
   },
   {
     icon: "phone",
-    title: "Phone",
-    lines: ["+91 00000 00000", "Mon–Fri, 9am–6pm"],
+    title: "WhatsApp",
+    lines: [
+      {
+        text: "+91 77788 77555",
+        href: "https://wa.me/917778877555",
+        external: true,
+      },
+      { text: "Chat with us on WhatsApp" },
+    ],
   },
 ];
 
@@ -53,8 +62,20 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-navy-900">{d.title}</h3>
                     {d.lines.map((l) => (
-                      <p key={l} className="text-sm text-navy-700/80">
-                        {l}
+                      <p key={l.text} className="text-sm text-navy-700/80">
+                        {l.href ? (
+                          <a
+                            href={l.href}
+                            className="transition-colors hover:text-gold-600"
+                            {...(l.external
+                              ? { target: "_blank", rel: "noopener noreferrer" }
+                              : {})}
+                          >
+                            {l.text}
+                          </a>
+                        ) : (
+                          l.text
+                        )}
                       </p>
                     ))}
                   </div>

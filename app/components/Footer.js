@@ -70,15 +70,20 @@ export default function Footer() {
               <li>123 Financial District, Mumbai 400001</li>
               <li>
                 <a
-                  href="mailto:hello@aaravwealth.example"
+                  href="mailto:jigarmodi1992@gmail.com"
                   className="hover:text-gold-300"
                 >
-                  hello@aaravwealth.example
+                  jigarmodi1992@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+910000000000" className="hover:text-gold-300">
-                  +91 00000 00000
+                <a
+                  href="https://wa.me/917778877555"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold-300"
+                >
+                  WhatsApp: +91 77788 77555
                 </a>
               </li>
             </ul>
