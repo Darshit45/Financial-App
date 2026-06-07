@@ -40,7 +40,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5">
           <span className="grid h-9 w-9 place-items-center rounded-md bg-gold-500 font-serif text-lg font-bold text-navy-950">
-            M
+            A
           </span>
           <span className="font-serif text-xl font-semibold tracking-tight text-cream">
             Aarav <span className="text-gold-400">Wealth</span>

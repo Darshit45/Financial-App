@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-md bg-gold-500 font-serif text-lg font-bold text-navy-950">
-                M
+                A
               </span>
               <span className="font-serif text-xl font-semibold text-cream">
                 Aarav <span className="text-gold-400">Wealth</span>
