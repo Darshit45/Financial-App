@@ -48,7 +48,7 @@ export const team = [
     initials: "JM",
   },
   {
-    name: "Dhrivi Modi",
+    name: "Dhruvi Modi",
     role: "Associate Partner",
     bio: "25+ years in investment research and macroeconomic strategy.",
     initials: "DM",
@@ -60,7 +60,7 @@ export const team = [
     initials: "AM",
   },
   {
-    name: "Parva Modi",
+    name: "Parv Modi",
     role: "Tax & Compliance Lead",
     bio: "Chartered Accountant focused on tax-efficient wealth structures.",
     initials: "PM",
