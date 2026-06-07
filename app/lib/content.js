@@ -42,28 +42,28 @@ export const services = [
 
 export const team = [
   {
-    name: "A. Mehta",
+    name: "Jigar Modi",
     role: "Founder & CEO",
     bio: "Two decades guiding families through every market cycle with a research-first philosophy.",
+    initials: "JM",
+  },
+  {
+    name: "Dhrivi Modi",
+    role: "Associate Partner",
+    bio: "25+ years in investment research and macroeconomic strategy.",
+    initials: "DM",
+  },
+  {
+    name: "Aarav Modi",
+    role: "Client Relationships",
+    bio: "Specialist in long-term financial planning and client goal mapping.",
     initials: "AM",
   },
   {
-    name: "Dr. S. Rao",
-    role: "Associate Partner",
-    bio: "25+ years in investment research and macroeconomic strategy.",
-    initials: "SR",
-  },
-  {
-    name: "P. Sharma",
-    role: "Client Relationships",
-    bio: "Specialist in long-term financial planning and client goal mapping.",
-    initials: "PS",
-  },
-  {
-    name: "CA R. Verma",
+    name: "Parva Modi",
     role: "Tax & Compliance Lead",
     bio: "Chartered Accountant focused on tax-efficient wealth structures.",
-    initials: "RV",
+    initials: "PM",
   },
 ];
 
