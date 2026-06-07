@@ -43,7 +43,7 @@ export default function Navbar() {
             M
           </span>
           <span className="font-serif text-xl font-semibold tracking-tight text-cream">
-            Meridian <span className="text-gold-400">Wealth</span>
+            Aarav <span className="text-gold-400">Wealth</span>
           </span>
         </Link>
 

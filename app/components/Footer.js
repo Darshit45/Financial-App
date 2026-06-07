@@ -33,7 +33,7 @@ export default function Footer() {
                 M
               </span>
               <span className="font-serif text-xl font-semibold text-cream">
-                Meridian <span className="text-gold-400">Wealth</span>
+                Aarav <span className="text-gold-400">Wealth</span>
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
@@ -70,10 +70,10 @@ export default function Footer() {
               <li>123 Financial District, Mumbai 400001</li>
               <li>
                 <a
-                  href="mailto:hello@meridianwealth.example"
+                  href="mailto:hello@aaravwealth.example"
                   className="hover:text-gold-300"
                 >
-                  hello@meridianwealth.example
+                  hello@aaravwealth.example
                 </a>
               </li>
               <li>
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} Meridian Wealth. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aarav Wealth. All rights reserved.</p>
           <p className="text-cream/50">
             Investments are subject to market risks. Read all documents carefully.
           </p>

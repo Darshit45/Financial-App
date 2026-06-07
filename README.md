@@ -1,4 +1,4 @@
-# Financial-App — Meridian Wealth
+# Financial-App — Aarav Wealth
 
 A marketing/advisory site for a fictional wealth-management firm, built with
 **Next.js 15** (App Router, React 19) and **Tailwind CSS v4**.

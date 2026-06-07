@@ -110,7 +110,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
-                Why Meridian
+                Why Aarav
               </p>
               <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
                 Advice you can actually trust

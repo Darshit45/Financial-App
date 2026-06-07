@@ -3,8 +3,8 @@ import { PageHeader } from "../about/page";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
-  title: "Contact — Meridian Wealth",
-  description: "Book a free consultation or get in touch with the Meridian Wealth team.",
+  title: "Contact — Aarav Wealth",
+  description: "Book a free consultation or get in touch with the Aarav Wealth team.",
 };
 
 const details = [
@@ -16,7 +16,7 @@ const details = [
   {
     icon: "mail",
     title: "Email",
-    lines: ["hello@meridianwealth.example"],
+    lines: ["hello@aaravwealth.example"],
   },
   {
     icon: "phone",

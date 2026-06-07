@@ -3,9 +3,9 @@ import { CtaBand } from "../page";
 import { stats, values, team } from "../lib/content";
 
 export const metadata = {
-  title: "About — Meridian Wealth",
+  title: "About — Aarav Wealth",
   description:
-    "Learn about Meridian Wealth's philosophy, values and the team behind your financial plan.",
+    "Learn about Aarav Wealth's philosophy, values and the team behind your financial plan.",
 };
 
 export default function About() {
@@ -25,7 +25,7 @@ export default function About() {
             </h2>
             <div className="mt-5 space-y-4 text-navy-700/85 leading-relaxed">
               <p>
-                Meridian Wealth was founded on a simple conviction: that good
+                Aarav Wealth was founded on a simple conviction: that good
                 financial advice should be honest, patient, and free of hidden
                 agendas. Too often, investors are sold products instead of
                 being served plans.
