@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "./Icon";
 
 const cols = [
   {
@@ -71,8 +72,11 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:jigarmodi1992@gmail.com"
-                  className="hover:text-gold-300"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
+                  <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="gmail" className="h-3.5 w-3.5" />
+                  </span>
                   jigarmodi1992@gmail.com
                 </a>
               </li>
@@ -81,9 +85,12 @@ export default function Footer() {
                   href="https://wa.me/917778877555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold-300"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
-                  WhatsApp: +91 77788 77555
+                  <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="whatsapp" className="h-3.5 w-3.5" />
+                  </span>
+                  +91 77788 77555
                 </a>
               </li>
             </ul>
