@@ -14,7 +14,7 @@ const details = [
     lines: [{ text: "123 Financial District" }, { text: "Mumbai 400001, India" }],
   },
   {
-    icon: "mail",
+    icon: "gmail",
     title: "Email",
     lines: [
       { text: "jigarmodi1992@gmail.com", href: "mailto:jigarmodi1992@gmail.com" },
@@ -56,8 +56,14 @@ export default function Contact() {
             <div className="mt-8 space-y-6">
               {details.map((d) => (
                 <div key={d.title} className="flex gap-4">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-gold-400">
-                    <Icon name={d.icon} className="h-5 w-5" />
+                  <div
+                    className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${
+                      d.icon === "gmail" || d.icon === "whatsapp"
+                        ? "bg-white ring-1 ring-navy-900/10"
+                        : "bg-navy-900 text-gold-400"
+                    }`}
+                  >
+                    <Icon name={d.icon} className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-900">{d.title}</h3>
