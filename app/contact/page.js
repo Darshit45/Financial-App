@@ -21,7 +21,7 @@ const details = [
     ],
   },
   {
-    icon: "phone",
+    icon: "whatsapp",
     title: "WhatsApp",
     lines: [
       {
