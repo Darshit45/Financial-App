@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Icon from "./components/Icon";
+import AnimatedBackground from "./components/AnimatedBackground";
+import HeroBackground from "./components/HeroBackground";
+import GrowthBackground from "./components/GrowthBackground";
 import { stats, services, values, team, posts } from "./lib/content";
 
 export default function Home() {
@@ -7,10 +10,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy-900 text-cream">
-        <div className="pointer-events-none absolute inset-0 opacity-30">
-          <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold-500/20 blur-3xl" />
-          <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-navy-600/40 blur-3xl" />
-        </div>
+        <HeroBackground />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
           <div className="animate-fade-up">
             <span className="inline-block rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-300">
@@ -108,8 +108,9 @@ export default function Home() {
       </section>
 
       {/* Values band */}
-      <section className="bg-navy-900 text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-navy-900 text-cream">
+        <AnimatedBackground particles={false} />
+        <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
@@ -225,8 +226,9 @@ export default function Home() {
 
 export function CtaBand() {
   return (
-    <section className="bg-navy-950">
-      <div className="mx-auto max-w-5xl px-5 py-16 text-center lg:px-8 lg:py-20">
+    <section className="relative overflow-hidden bg-navy-900">
+      <GrowthBackground />
+      <div className="relative mx-auto max-w-5xl px-5 py-16 text-center lg:px-8 lg:py-20">
         <h2 className="font-serif text-3xl font-semibold text-cream sm:text-4xl">
           Ready to take control of your financial future?
         </h2>
