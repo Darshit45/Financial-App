@@ -3,7 +3,7 @@ import { CtaBand } from "../page";
 import Calculator from "./Calculator";
 
 export const metadata = {
-  title: "Compound Interest Calculator — Aarav Wealth",
+  title: "Compound Interest Calculator — Dhanvega",
   description:
     "See how your money can grow over time with regular contributions and compounding returns.",
 };

@@ -3,25 +3,34 @@ import { PageHeader } from "../about/page";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
-  title: "Contact — Aarav Wealth",
-  description: "Book a free consultation or get in touch with the Aarav Wealth team.",
+  title: "Contact — Dhanvega",
+  description: "Book a free consultation or get in touch with the Dhanvega team.",
 };
 
 const details = [
   {
     icon: "pin",
     title: "Head Office",
-    lines: ["123 Financial District", "Mumbai 400001, India"],
+    lines: [{ text: "123 Financial District" }, { text: "Mumbai 400001, India" }],
   },
   {
-    icon: "mail",
+    icon: "gmail",
     title: "Email",
-    lines: ["hello@aaravwealth.example"],
+    lines: [
+      { text: "jigarmodi1992@gmail.com", href: "mailto:jigarmodi1992@gmail.com" },
+    ],
   },
   {
-    icon: "phone",
-    title: "Phone",
-    lines: ["+91 00000 00000", "Mon–Fri, 9am–6pm"],
+    icon: "whatsapp",
+    title: "WhatsApp",
+    lines: [
+      {
+        text: "+91 77788 77555",
+        href: "https://wa.me/917778877555",
+        external: true,
+      },
+      { text: "Chat with us on WhatsApp" },
+    ],
   },
 ];
 
@@ -47,14 +56,32 @@ export default function Contact() {
             <div className="mt-8 space-y-6">
               {details.map((d) => (
                 <div key={d.title} className="flex gap-4">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-gold-400">
-                    <Icon name={d.icon} className="h-5 w-5" />
+                  <div
+                    className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${
+                      d.icon === "gmail" || d.icon === "whatsapp"
+                        ? "bg-white ring-1 ring-navy-900/10"
+                        : "bg-navy-900 text-gold-400"
+                    }`}
+                  >
+                    <Icon name={d.icon} className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-900">{d.title}</h3>
                     {d.lines.map((l) => (
-                      <p key={l} className="text-sm text-navy-700/80">
-                        {l}
+                      <p key={l.text} className="text-sm text-navy-700/80">
+                        {l.href ? (
+                          <a
+                            href={l.href}
+                            className="transition-colors hover:text-gold-600"
+                            {...(l.external
+                              ? { target: "_blank", rel: "noopener noreferrer" }
+                              : {})}
+                          >
+                            {l.text}
+                          </a>
+                        ) : (
+                          l.text
+                        )}
                       </p>
                     ))}
                   </div>

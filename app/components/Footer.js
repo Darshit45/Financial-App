@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "./Icon";
 
 const cols = [
   {
@@ -30,12 +31,15 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-md bg-gold-500 font-serif text-lg font-bold text-navy-950">
-                M
+                D
               </span>
               <span className="font-serif text-xl font-semibold text-cream">
-                Aarav <span className="text-gold-400">Wealth</span>
+                Dhan<span className="text-gold-400">vega</span>
               </span>
             </Link>
+            <p className="mt-3 font-serif text-sm italic text-gold-300">
+              With You, For Every Tomorrow
+            </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Disciplined, research-backed wealth management built around your
               goals — not sales targets.
@@ -70,15 +74,26 @@ export default function Footer() {
               <li>123 Financial District, Mumbai 400001</li>
               <li>
                 <a
-                  href="mailto:hello@aaravwealth.example"
-                  className="hover:text-gold-300"
+                  href="mailto:jigarmodi1992@gmail.com"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
-                  hello@aaravwealth.example
+                  <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="gmail" className="h-3.5 w-3.5" />
+                  </span>
+                  jigarmodi1992@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+910000000000" className="hover:text-gold-300">
-                  +91 00000 00000
+                <a
+                  href="https://wa.me/917778877555"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
+                >
+                  <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="whatsapp" className="h-3.5 w-3.5" />
+                  </span>
+                  +91 77788 77555
                 </a>
               </li>
             </ul>
@@ -86,7 +101,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} Aarav Wealth. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Dhanvega. All rights reserved.</p>
           <p className="text-cream/50">
             Investments are subject to market risks. Read all documents carefully.
           </p>

@@ -4,7 +4,7 @@ import { CtaBand } from "../page";
 import { services, faqs } from "../lib/content";
 
 export const metadata = {
-  title: "Services — Aarav Wealth",
+  title: "Services — Dhanvega",
   description:
     "Wealth management, insurance, tax and estate planning — one integrated strategy.",
 };

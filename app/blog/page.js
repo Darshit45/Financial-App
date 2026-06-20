@@ -4,7 +4,7 @@ import { CtaBand } from "../page";
 import { posts } from "../lib/content";
 
 export const metadata = {
-  title: "Insights — Aarav Wealth",
+  title: "Insights — Dhanvega",
   description: "Practical thinking on investing, planning, tax and protecting wealth.",
 };
 
