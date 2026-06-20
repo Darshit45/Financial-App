@@ -77,6 +77,21 @@ const brandIcons = {
       />
     </svg>
   ),
+  instagram: (className) => (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <radialGradient id="igGrad" cx="0.3" cy="1.05" r="1.1">
+          <stop offset="0" stopColor="#fdf497" />
+          <stop offset="0.45" stopColor="#fd5949" />
+          <stop offset="0.6" stopColor="#d6249f" />
+          <stop offset="0.9" stopColor="#285aeb" />
+        </radialGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#igGrad)" />
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" strokeWidth="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.2" fill="#fff" />
+    </svg>
+  ),
   gmail: (className) => (
     <svg className={className} viewBox="0 0 48 48" aria-hidden="true">
       <path
