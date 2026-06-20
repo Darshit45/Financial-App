@@ -3,7 +3,7 @@ import Icon from "./components/Icon";
 import AnimatedBackground from "./components/AnimatedBackground";
 import HeroBackground from "./components/HeroBackground";
 import GrowthBackground from "./components/GrowthBackground";
-import { stats, services, values, team, posts } from "./lib/content";
+import { stats, services, values, team } from "./lib/content";
 
 export default function Home() {
   return (
@@ -186,49 +186,6 @@ export default function Home() {
               <p className="mt-3 text-sm text-navy-700/80">{m.bio}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Insights preview */}
-      <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-5 pb-20 lg:px-8 lg:pb-24">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-gold-500">
-                Insights
-              </p>
-              <h2 className="mt-3 font-serif text-3xl font-semibold text-navy-900 sm:text-4xl">
-                From our desk
-              </h2>
-            </div>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 hover:text-gold-600"
-            >
-              View all <Icon name="arrow" className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {posts.map((p) => (
-              <Link
-                key={p.slug}
-                href="/blog"
-                className="group rounded-2xl border border-navy-900/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="flex items-center gap-3 text-xs text-navy-700/70">
-                  <span className="rounded-full bg-navy-900/5 px-3 py-1 font-semibold text-navy-900">
-                    {p.category}
-                  </span>
-                  <span>{p.read}</span>
-                </div>
-                <h3 className="mt-4 font-serif text-lg font-semibold leading-snug text-navy-900 group-hover:text-gold-600">
-                  {p.title}
-                </h3>
-                <p className="mt-2 text-sm text-navy-700/80">{p.excerpt}</p>
-                <p className="mt-4 text-xs text-navy-700/60">{p.date}</p>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

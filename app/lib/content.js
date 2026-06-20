@@ -52,7 +52,7 @@ export const team = [
   {
     name: "Jigar Modi",
     role: "Founder & CEO",
-    bio: "Two decades guiding families through every market cycle with a research-first philosophy.",
+    bio: "A decade of guiding families through market cycles with a research-first approach.",
     initials: "JM",
   },
   {
@@ -98,35 +98,5 @@ export const faqs = [
   {
     q: "How do I get started?",
     a: "Book a free consultation through our contact page. We'll understand your goals and design a plan tailored to you.",
-  },
-];
-
-export const posts = [
-  {
-    slug: "temperament-over-timing",
-    title: "Why temperament beats timing in long-term investing",
-    excerpt:
-      "The biggest driver of returns isn't when you invest — it's how you behave when markets get noisy.",
-    date: "May 28, 2026",
-    category: "Investing",
-    read: "5 min read",
-  },
-  {
-    slug: "building-an-emergency-fund",
-    title: "The foundation: building an emergency fund that works",
-    excerpt:
-      "Before you invest a rupee for growth, here's the safety net every financial plan needs.",
-    date: "May 12, 2026",
-    category: "Planning",
-    read: "4 min read",
-  },
-  {
-    slug: "tax-efficient-investing",
-    title: "A practical guide to tax-efficient investing",
-    excerpt:
-      "Small structural choices can meaningfully change your after-tax returns over a decade.",
-    date: "Apr 30, 2026",
-    category: "Tax",
-    read: "6 min read",
   },
 ];
