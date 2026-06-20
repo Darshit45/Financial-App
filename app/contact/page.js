@@ -3,8 +3,8 @@ import { PageHeader } from "../about/page";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
-  title: "Contact — Aarav Wealth",
-  description: "Book a free consultation or get in touch with the Aarav Wealth team.",
+  title: "Contact — Dhanvega",
+  description: "Book a free consultation or get in touch with the Dhanvega team.",
 };
 
 const details = [

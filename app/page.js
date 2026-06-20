@@ -20,6 +20,9 @@ export default function Home() {
               Clarity in every <span className="text-gold-400">financial</span>{" "}
               decision.
             </h1>
+            <p className="mt-5 font-serif text-xl italic text-gold-300 sm:text-2xl">
+              With You, For Every Tomorrow
+            </p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
               Personalized, research-backed wealth management that puts your
               goals first. We help you build, protect, and pass on wealth with
@@ -110,7 +113,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
-                Why Aarav
+                Why Dhanvega
               </p>
               <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
                 Advice you can actually trust
