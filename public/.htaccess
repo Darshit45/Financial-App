@@ -1,0 +1,12 @@
+# Static-site hosting on Apache / GoDaddy cPanel.
+
+# Serve the exported 404 page for missing URLs.
+ErrorDocument 404 /404.html
+
+# Don't let Apache guess file extensions (avoids /about resolving oddly).
+Options -MultiViews
+
+# Force HTTPS once your SSL certificate is active (uncomment to enable):
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

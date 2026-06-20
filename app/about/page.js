@@ -121,9 +121,6 @@ export default function About() {
   );
 }
 
-// GitHub Pages serves the site from a /<repo> subpath; prefix assets to match.
-const ASSET_PREFIX = process.env.GITHUB_PAGES === "true" ? "/Financial-App" : "";
-
 export function PageHeader({ eyebrow, title, subtitle, video }) {
   return (
     <section className="relative overflow-hidden bg-navy-900 text-cream">
@@ -137,7 +134,7 @@ export function PageHeader({ eyebrow, title, subtitle, video }) {
             playsInline
             preload="metadata"
           >
-            <source src={`${ASSET_PREFIX}/videos/${video}`} type="video/mp4" />
+            <source src={`/videos/${video}`} type="video/mp4" />
           </video>
           {/* Dark overlay keeps the centered heading readable over footage. */}
           <div className="absolute inset-0 bg-navy-950/75" />
