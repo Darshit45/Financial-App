@@ -1,8 +1,8 @@
 export const stats = [
-  { value: "₹2,500 Cr+", label: "Assets Under Advisory" },
-  { value: "1,200+", label: "Families Served" },
-  { value: "25+", label: "Countries Reached" },
-  { value: "15+", label: "Years of Experience" },
+  { value: "700+", label: "Families Served" },
+  { value: "2,000+", label: "Financial Counselling" },
+  { value: "25+", label: "Awards Won" },
+  { value: "10+", label: "Years of Experience" },
 ];
 
 export const services = [
@@ -31,12 +31,20 @@ export const services = [
     points: ["Tax optimization", "Compliance guidance", "Capital gains", "Year-round review"],
   },
   {
-    slug: "estate-planning",
-    title: "Estate Planning",
-    icon: "home",
+    slug: "portfolio-revamp",
+    title: "Portfolio Revamp",
+    icon: "refresh",
     summary:
-      "Structure your legacy with clarity — wills, trusts and seamless succession planning.",
-    points: ["Succession planning", "Wills & trusts", "Legacy structuring", "Family governance"],
+      "A full health-check and restructure of your existing investments — we trim underperformers, remove overlap, and realign every holding to your goals.",
+    points: ["Holdings audit", "Overlap & risk review", "Tax-aware switches", "Goal realignment"],
+  },
+  {
+    slug: "strategic-allocation",
+    title: "Strategic Allocation",
+    icon: "layers",
+    summary:
+      "A disciplined asset-allocation framework across equity, debt and alternatives — weighted to your risk profile and rebalanced as markets shift.",
+    points: ["Asset-mix design", "Risk-based weighting", "Diversification", "Periodic rebalancing"],
   },
 ];
 
@@ -50,20 +58,8 @@ export const team = [
   {
     name: "Dhruvi Modi",
     role: "Associate Partner",
-    bio: "25+ years in investment research and macroeconomic strategy.",
+    bio: "10+ years in investment research and macroeconomic strategy.",
     initials: "DM",
-  },
-  {
-    name: "Aarav Modi",
-    role: "Client Relationships",
-    bio: "Specialist in long-term financial planning and client goal mapping.",
-    initials: "AM",
-  },
-  {
-    name: "Parv Modi",
-    role: "Tax & Compliance Lead",
-    bio: "Chartered Accountant focused on tax-efficient wealth structures.",
-    initials: "PM",
   },
 ];
 

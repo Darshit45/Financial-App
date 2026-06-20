@@ -7,7 +7,8 @@ const services = [
   "Wealth Management",
   "Insurance Planning",
   "Tax Planning",
-  "Estate Planning",
+  "Portfolio Revamp",
+  "Strategic Allocation",
   "General enquiry",
 ];
 

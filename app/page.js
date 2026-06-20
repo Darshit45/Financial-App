@@ -8,60 +8,74 @@ import { stats, services, values, team, posts } from "./lib/content";
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-900 text-cream">
+      {/* Hero — animation with just the tagline */}
+      <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-navy-900 text-cream">
         <HeroBackground />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-          <div className="animate-fade-up">
-            <span className="inline-block rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-300">
-              Truthful progress, real wealth
-            </span>
-            <h1 className="mt-6 font-serif text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Clarity in every <span className="text-gold-400">financial</span>{" "}
-              decision.
-            </h1>
-            <p className="mt-5 font-serif text-xl italic text-gold-300 sm:text-2xl">
-              With You, For Every Tomorrow
-            </p>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              Personalized, research-backed wealth management that puts your
-              goals first. We help you build, protect, and pass on wealth with
-              discipline — never speculation.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 font-semibold text-navy-950 transition-colors hover:bg-gold-400"
-              >
-                Book a Free Consultation
-                <Icon name="arrow" className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full border border-cream/30 px-7 py-3.5 font-semibold text-cream transition-colors hover:bg-cream/10"
-              >
-                Explore Services
-              </Link>
-            </div>
+        <div className="animate-fade-up relative px-5 text-center">
+          <p className="font-serif text-3xl italic leading-tight text-gold-300 sm:text-5xl lg:text-6xl">
+            With You, For Every Tomorrow
+          </p>
+          <div className="mt-12 flex justify-center">
+            <Icon
+              name="arrow"
+              className="h-6 w-6 rotate-90 animate-bounce text-gold-300/70"
+            />
           </div>
+        </div>
+      </section>
 
-          <div className="animate-fade-up rounded-2xl border border-white/10 bg-navy-800/60 p-8 backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
-              Our philosophy
-            </p>
-            <p className="mt-4 font-serif text-2xl leading-snug text-cream">
-              “Investing is more about temperament than timing.”
-            </p>
-            <div className="mt-8 grid grid-cols-2 gap-6">
-              {stats.slice(0, 4).map((s) => (
-                <div key={s.label}>
-                  <p className="font-serif text-2xl font-bold text-gold-400">
-                    {s.value}
-                  </p>
-                  <p className="mt-1 text-sm text-cream/70">{s.label}</p>
-                </div>
-              ))}
-            </div>
+      {/* Intro — headline, promise & CTAs */}
+      <section className="bg-cream">
+        <div className="mx-auto max-w-3xl px-5 py-20 text-center lg:py-24">
+          <span className="inline-block rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-600">
+            Truthful progress, real wealth
+          </span>
+          <h1 className="mt-6 font-serif text-4xl font-semibold leading-tight text-navy-900 sm:text-5xl">
+            Clarity in every <span className="text-gold-600">financial</span>{" "}
+            decision.
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-navy-700/80">
+            Personalized, research-backed wealth management that puts your goals
+            first. We help you build, protect, and pass on wealth with
+            discipline — never speculation.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 font-semibold text-navy-950 transition-colors hover:bg-gold-400"
+            >
+              Book a Free Consultation
+              <Icon name="arrow" className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-full border border-navy-900/20 px-7 py-3.5 font-semibold text-navy-900 transition-colors hover:bg-navy-900/5"
+            >
+              Explore Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy & stats */}
+      <section className="relative overflow-hidden bg-navy-900 text-cream">
+        <AnimatedBackground particles={false} />
+        <div className="relative mx-auto max-w-5xl px-5 py-20 text-center lg:py-24">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
+            Our philosophy
+          </p>
+          <blockquote className="mx-auto mt-4 max-w-3xl font-serif text-2xl italic leading-snug sm:text-3xl">
+            “Investing is more about temperament than timing.”
+          </blockquote>
+          <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
+            {stats.slice(0, 4).map((s) => (
+              <div key={s.label}>
+                <p className="font-serif text-3xl font-bold text-gold-400 sm:text-4xl">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-sm text-cream/70">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -76,12 +90,12 @@ export default function Home() {
             A complete plan for your wealth
           </h2>
           <p className="mt-4 text-navy-700/80">
-            Four pillars, one integrated strategy built around your life and
+            Five pillars, one integrated strategy built around your life and
             your goals.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {services.map((s) => (
             <div
               key={s.slug}
@@ -156,7 +170,7 @@ export default function Home() {
             Experienced advisors in your corner
           </h2>
         </div>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-14 grid max-w-2xl gap-6 sm:grid-cols-2">
           {team.map((m) => (
             <div
               key={m.name}

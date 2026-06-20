@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "Dhanvega — Clarity in Every Decision",
   description:
-    "Personalized wealth management, insurance, tax and estate planning. Disciplined, research-backed investing for long-term financial freedom.",
+    "Personalized wealth management, insurance, tax, portfolio and allocation strategy. Disciplined, research-backed investing for long-term financial freedom.",
   openGraph: {
     title: "Dhanvega",
     description: "Clarity in every financial decision.",
