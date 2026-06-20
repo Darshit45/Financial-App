@@ -1,4 +1,5 @@
 import Icon from "../components/Icon";
+import AnimatedBackground from "../components/AnimatedBackground";
 import { CtaBand } from "../page";
 import { stats, values, team } from "../lib/content";
 
@@ -15,6 +16,7 @@ export default function About() {
         eyebrow="About us"
         title="Built on truthful progress"
         subtitle="We exist to help families make confident financial decisions — grounded in research, discipline, and complete transparency."
+        video="about-hero.mp4"
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
@@ -119,12 +121,31 @@ export default function About() {
   );
 }
 
-export function PageHeader({ eyebrow, title, subtitle }) {
+// GitHub Pages serves the site from a /<repo> subpath; prefix assets to match.
+const ASSET_PREFIX = process.env.GITHUB_PAGES === "true" ? "/Financial-App" : "";
+
+export function PageHeader({ eyebrow, title, subtitle, video }) {
   return (
     <section className="relative overflow-hidden bg-navy-900 text-cream">
-      <div className="pointer-events-none absolute inset-0 opacity-30">
-        <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-gold-500/20 blur-3xl" />
-      </div>
+      {video ? (
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          >
+            <source src={`${ASSET_PREFIX}/videos/${video}`} type="video/mp4" />
+          </video>
+          {/* Dark overlay keeps the centered heading readable over footage. */}
+          <div className="absolute inset-0 bg-navy-950/75" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 to-navy-900/40" />
+        </div>
+      ) : (
+        <AnimatedBackground />
+      )}
       <div className="relative mx-auto max-w-4xl px-5 py-16 text-center lg:px-8 lg:py-24">
         <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
           {eyebrow}

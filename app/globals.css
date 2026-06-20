@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #060f1c;
-  --color-navy-900: #0a1626;
-  --color-navy-800: #102135;
-  --color-navy-700: #1a3050;
-  --color-navy-600: #24426b;
-  --color-gold-700: #8f6f28;
-  --color-gold-600: #b08a35;
-  --color-gold-500: #c9a14a;
-  --color-gold-400: #d9b566;
-  --color-gold-300: #e6cd92;
-  --color-cream: #f7f4ec;
+  /* Deep teal base (named "navy-*" for back-compat with existing classes) */
+  --color-navy-950: #07171c;
+  --color-navy-900: #0c2630;
+  --color-navy-800: #123642;
+  --color-navy-700: #1d4d5c;
+  --color-navy-600: #2a6576;
+  --color-gold-700: #9a7726;
+  --color-gold-600: #bd9238;
+  --color-gold-500: #d4a945;
+  --color-gold-400: #e3bd66;
+  --color-gold-300: #f1d79b;
+  --color-cream: #f8f5ee;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
@@ -44,4 +45,187 @@ body {
 
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
+}
+
+/* ---- Ambient background animation ---------------------------------- */
+
+/* Slow-drifting aurora orbs */
+@keyframes drift-orb {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.12);
+  }
+  66% {
+    transform: translate(-30px, 28px) scale(0.92);
+  }
+}
+
+@keyframes drift-orb-alt {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-45px, -34px) scale(1.18);
+  }
+}
+
+/* Faint gold particles rising and fading */
+@keyframes particle-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-160px);
+    opacity: 0;
+  }
+}
+
+/* Slow sweeping light line */
+@keyframes sweep {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(320%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+.bg-orb {
+  animation: drift-orb 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.bg-orb-alt {
+  animation: drift-orb-alt 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+.bg-particle {
+  animation: particle-rise linear infinite;
+  will-change: transform, opacity;
+}
+
+.bg-sweep {
+  animation: sweep 11s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Growth-themed hero animation ------------------------------------- */
+
+/* Bars gently breathing while holding their ascending shape */
+@keyframes bar-breathe {
+  0%,
+  100% {
+    transform: scaleY(0.82);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Coins rising and flipping as they ascend */
+@keyframes coin-rise {
+  0% {
+    transform: translateY(20px) rotateY(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  88% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-260px) rotateY(720deg);
+    opacity: 0;
+  }
+}
+
+/* Upward trend line drawing itself */
+@keyframes trend-draw {
+  0% {
+    stroke-dashoffset: 2400;
+  }
+  55% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Pulsing glow at the peak of the trend line */
+@keyframes tip-pulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 1;
+  }
+}
+
+.bg-bar {
+  transform-origin: bottom;
+  animation: bar-breathe 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.bg-coin {
+  animation: coin-rise linear infinite;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.bg-trend {
+  stroke-dasharray: 2400;
+  animation: trend-draw 9s ease-in-out infinite;
+}
+
+.bg-trend-tip {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tip-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .bg-orb,
+  .bg-orb-alt,
+  .bg-particle,
+  .bg-sweep,
+  .bg-bar,
+  .bg-coin,
+  .bg-trend,
+  .bg-trend-tip {
+    animation: none;
+  }
+  .bg-particle,
+  .bg-coin {
+    opacity: 0;
+  }
+  .bg-trend {
+    stroke-dashoffset: 0;
+  }
 }

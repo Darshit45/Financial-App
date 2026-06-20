@@ -1,5 +1,6 @@
 import Icon from "../components/Icon";
 import { PageHeader } from "../about/page";
+import { CtaBand } from "../page";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
@@ -104,6 +105,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <CtaBand />
     </>
   );
 }

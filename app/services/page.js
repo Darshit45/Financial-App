@@ -1,4 +1,5 @@
 import Icon from "../components/Icon";
+import AnimatedBackground from "../components/AnimatedBackground";
 import { PageHeader } from "../about/page";
 import { CtaBand } from "../page";
 import { services, faqs } from "../lib/content";
@@ -78,8 +79,9 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="bg-navy-900 text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-navy-900 text-cream">
+        <AnimatedBackground particles={false} />
+        <div className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-gold-300">
               How we work

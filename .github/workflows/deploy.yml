@@ -39,7 +39,7 @@ jobs:
 
       # Stop GitHub Pages' Jekyll from ignoring the _next/ folder.
       - name: Add .nojekyll
-        run: touch public/.nojekyll
+        run: touch out/.nojekyll
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./out
 
   deploy:
     needs: build

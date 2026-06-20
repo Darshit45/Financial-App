@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf out public && next build && mv out public",
-    "vercel-build": "rm -rf out public && next build && mv out public",
+    "build": "next build",
+    "vercel-build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
