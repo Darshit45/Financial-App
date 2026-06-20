@@ -7,7 +7,7 @@ import { services, faqs } from "../lib/content";
 export const metadata = {
   title: "Services — Dhanvega",
   description:
-    "Wealth management, insurance, tax and estate planning — one integrated strategy.",
+    "Wealth management, insurance, tax, portfolio and allocation — one integrated strategy.",
 };
 
 const process = [
@@ -39,7 +39,7 @@ export default function Services() {
       <PageHeader
         eyebrow="Our services"
         title="Everything your wealth needs"
-        subtitle="Four integrated pillars working together so nothing about your financial life is left to chance."
+        subtitle="Five integrated pillars working together so nothing about your financial life is left to chance."
       />
 
       {/* Detailed services */}

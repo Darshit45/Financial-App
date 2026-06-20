@@ -11,26 +11,33 @@ export const metadata = {
 const details = [
   {
     icon: "pin",
-    title: "Head Office",
-    lines: [{ text: "123 Financial District" }, { text: "Mumbai 400001, India" }],
+    title: "Office",
+    lines: [
+      { text: "303, Abhusan Complex" },
+      { text: "Sardar Patel Stadium Road, Naranpura" },
+      { text: "Ahmedabad - 380013" },
+    ],
   },
   {
     icon: "gmail",
     title: "Email",
     lines: [
-      { text: "jigarmodi1992@gmail.com", href: "mailto:jigarmodi1992@gmail.com" },
+      {
+        text: "info@dhanvegafinserv.com",
+        href: "mailto:info@dhanvegafinserv.com",
+      },
     ],
   },
   {
     icon: "whatsapp",
-    title: "WhatsApp",
+    title: "Mobile",
     lines: [
       {
-        text: "+91 77788 77555",
-        href: "https://wa.me/917778877555",
+        text: "+91 92748 86588",
+        href: "https://wa.me/919274886588",
         external: true,
       },
-      { text: "Chat with us on WhatsApp" },
+      { text: "Call or chat with us on WhatsApp" },
     ],
   },
 ];
@@ -93,7 +100,7 @@ export default function Contact() {
             <div className="mt-8 overflow-hidden rounded-2xl border border-navy-900/10">
               <iframe
                 title="Office location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=72.80%2C18.90%2C72.90%2C19.00&layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=72.55%2C23.03%2C72.59%2C23.07&layer=mapnik&marker=23.0496%2C72.5713"
                 className="h-56 w-full"
                 loading="lazy"
               />

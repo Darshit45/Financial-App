@@ -97,7 +97,7 @@ export default function About() {
             Meet the team
           </h2>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-2xl gap-6 sm:grid-cols-2">
           {team.map((m) => (
             <div
               key={m.name}

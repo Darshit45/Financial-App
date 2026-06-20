@@ -18,7 +18,8 @@ const cols = [
       { href: "/services", label: "Wealth Management" },
       { href: "/services", label: "Insurance Planning" },
       { href: "/services", label: "Tax Planning" },
-      { href: "/services", label: "Estate Planning" },
+      { href: "/services", label: "Portfolio Revamp" },
+      { href: "/services", label: "Strategic Allocation" },
     ],
   },
 ];
@@ -71,21 +72,24 @@ export default function Footer() {
               Get in touch
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li>123 Financial District, Mumbai 400001</li>
+              <li>
+                303, Abhusan Complex, Sardar Patel Stadium Road, Naranpura,
+                Ahmedabad - 380013
+              </li>
               <li>
                 <a
-                  href="mailto:jigarmodi1992@gmail.com"
+                  href="mailto:info@dhanvegafinserv.com"
                   className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
                   <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
                     <Icon name="gmail" className="h-3.5 w-3.5" />
                   </span>
-                  jigarmodi1992@gmail.com
+                  info@dhanvegafinserv.com
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/917778877555"
+                  href="https://wa.me/919274886588"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-gold-300"
@@ -93,7 +97,7 @@ export default function Footer() {
                   <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
                     <Icon name="whatsapp" className="h-3.5 w-3.5" />
                   </span>
-                  +91 77788 77555
+                  +91 92748 86588
                 </a>
               </li>
             </ul>

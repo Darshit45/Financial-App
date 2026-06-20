@@ -49,6 +49,21 @@ const paths = {
       <circle cx="12" cy="10" r="2.5" />
     </>
   ),
+  refresh: (
+    <>
+      <path d="M3 12a9 9 0 0115.4-6.4L21 8" />
+      <path d="M21 3v5h-5" />
+      <path d="M21 12a9 9 0 01-15.4 6.4L3 16" />
+      <path d="M3 21v-5h5" />
+    </>
+  ),
+  layers: (
+    <>
+      <path d="M12 2l9 5-9 5-9-5 9-5z" />
+      <path d="M3 12l9 5 9-5" />
+      <path d="M3 17l9 5 9-5" />
+    </>
+  ),
 };
 
 // Full-color brand logos — rendered in their official colors, ignoring the
