@@ -1,6 +1,6 @@
 export const stats = [
-  { value: "700+", label: "Families Served" },
   { value: "2,000+", label: "Financial Counselling" },
+  { value: "700+", label: "Families Served" },
   { value: "25+", label: "Awards Won" },
   { value: "10+", label: "Years of Experience" },
 ];
