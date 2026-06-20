@@ -19,7 +19,7 @@ const details = [
     ],
   },
   {
-    icon: "gmail",
+    icon: "mail",
     title: "Email",
     lines: [
       {
@@ -97,14 +97,26 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-navy-900/10">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=303%2C+Abhusan+Complex%2C+Sardar+Patel+Stadium+Road%2C+Naranpura%2C+Ahmedabad+380013"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open our office location in Google Maps"
+              className="group relative mt-8 block overflow-hidden rounded-2xl border border-navy-900/10"
+            >
               <iframe
                 title="Office location"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=72.55%2C23.03%2C72.59%2C23.07&layer=mapnik&marker=23.0496%2C72.5713"
-                className="h-56 w-full"
+                className="pointer-events-none h-56 w-full"
                 loading="lazy"
               />
-            </div>
+              {/* Transparent click layer so tapping anywhere opens Maps */}
+              <span className="absolute inset-0" />
+              <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-navy-900 px-3 py-1.5 text-xs font-semibold text-cream shadow-md transition-colors group-hover:bg-gold-500 group-hover:text-navy-950">
+                <Icon name="pin" className="h-3.5 w-3.5" />
+                Open in Google Maps
+              </span>
+            </a>
           </div>
 
           <div className="lg:col-span-3">

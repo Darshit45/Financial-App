@@ -73,8 +73,18 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                303, Abhusan Complex, Sardar Patel Stadium Road, Naranpura,
-                Ahmedabad - 380013
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=303%2C+Abhusan+Complex%2C+Sardar+Patel+Stadium+Road%2C+Naranpura%2C+Ahmedabad+380013"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-start gap-2 hover:text-gold-300"
+                >
+                  <span className="mt-0.5 inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="pin" className="h-3.5 w-3.5 text-navy-900" />
+                  </span>
+                  303, Abhusan Complex, Sardar Patel Stadium Road, Naranpura,
+                  Ahmedabad - 380013
+                </a>
               </li>
               <li>
                 <a
@@ -82,7 +92,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
                   <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
-                    <Icon name="gmail" className="h-3.5 w-3.5" />
+                    <Icon name="mail" className="h-3.5 w-3.5 text-navy-900" />
                   </span>
                   info@dhanvegafinserv.com
                 </a>
