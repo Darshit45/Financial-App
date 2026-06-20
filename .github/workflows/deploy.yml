@@ -34,8 +34,6 @@ jobs:
 
       - name: Build static site
         run: npm run build
-        env:
-          GITHUB_PAGES: "true"
 
       # Stop GitHub Pages' Jekyll from ignoring the _next/ folder.
       - name: Add .nojekyll

@@ -13,9 +13,7 @@ import GrowthBackground from "./GrowthBackground";
 // ---------------------------------------------------------------------------
 const VIDEO_ENABLED = true;
 
-// GitHub Pages serves the site from a /<repo> subpath; prefix assets to match.
-const PREFIX = process.env.GITHUB_PAGES === "true" ? "/Financial-App" : "";
-const HERO_VIDEO_URL = `${PREFIX}/videos/hero.mp4`;
+const HERO_VIDEO_URL = "/videos/hero.mp4";
 
 export default function HeroBackground() {
   if (!VIDEO_ENABLED) {
