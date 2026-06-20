@@ -40,6 +40,18 @@ const details = [
       { text: "Call or chat with us on WhatsApp" },
     ],
   },
+  {
+    icon: "instagram",
+    title: "Instagram",
+    lines: [
+      {
+        text: "@dhruvifinfix",
+        href: "https://www.instagram.com/dhruvifinfix",
+        external: true,
+      },
+      { text: "Follow us on Instagram" },
+    ],
+  },
 ];
 
 export default function Contact() {
@@ -66,7 +78,7 @@ export default function Contact() {
                 <div key={d.title} className="flex gap-4">
                   <div
                     className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${
-                      d.icon === "gmail" || d.icon === "whatsapp"
+                      d.icon === "whatsapp" || d.icon === "instagram"
                         ? "bg-white ring-1 ring-navy-900/10"
                         : "bg-navy-900 text-gold-400"
                     }`}
