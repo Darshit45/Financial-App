@@ -4,6 +4,9 @@ import { useMemo, useState } from "react";
 import Icon from "../components/Icon";
 import { MoneyField, SliderField, Stat, Chart, inr } from "./Calculator";
 
+// Plain Indian-grouped number (no currency symbol on the symbol-prefixed cells).
+const num = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
+
 // SIP with an annual step-up: the monthly amount increases by `stepUp`% at the
 // start of every year. Simulated month by month so growth is accurate.
 function computeSip({ monthly, stepUp, rate, years }) {
@@ -22,8 +25,12 @@ function computeSip({ monthly, stepUp, rate, years }) {
     balance *= 1 + i; // grow for the month
 
     if (m % 12 === 0) {
+      const yr = m / 12;
+      const sipMonthly = monthly * Math.pow(1 + stepUp / 100, yr - 1);
       yearly.push({
-        year: m / 12,
+        year: yr,
+        sipMonthly,
+        investedYear: sipMonthly * 12,
         invested,
         balance,
         gains: balance - invested,
@@ -156,6 +163,41 @@ export default function SipCalculator() {
             </div>
           </div>
           <Chart yearly={chartYearly} maxBalance={maxBalance} years={years} />
+        </div>
+
+        {/* Step-up amount invested summary */}
+        <div className="mt-6 rounded-2xl border border-navy-900/10 bg-white p-6 shadow-sm sm:p-7">
+          <h3 className="font-serif text-lg font-semibold text-navy-900">
+            Step-up amount invested summary
+          </h3>
+          <p className="mt-1 text-sm text-navy-700/70">
+            How your monthly SIP steps up and the amount invested grows each
+            year.
+          </p>
+          <div className="mt-5 overflow-x-auto rounded-xl border border-navy-900/10">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-navy-900/5 text-navy-900">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Year</th>
+                  <th className="px-4 py-3 font-semibold">SIP Amount / Month</th>
+                  <th className="px-4 py-3 font-semibold">Invested / Year</th>
+                  <th className="px-4 py-3 font-semibold">Total Invested</th>
+                </tr>
+              </thead>
+              <tbody className="text-navy-700/90">
+                {result.yearly.map((y) => (
+                  <tr key={y.year} className="border-t border-navy-900/5">
+                    <td className="px-4 py-3">Year {y.year}</td>
+                    <td className="px-4 py-3">₹{num.format(Math.round(y.sipMonthly))}</td>
+                    <td className="px-4 py-3">₹{num.format(Math.round(y.investedYear))}</td>
+                    <td className="px-4 py-3 font-semibold text-navy-900">
+                      ₹{num.format(Math.round(y.invested))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Schedule */}
