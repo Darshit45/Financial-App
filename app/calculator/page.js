@@ -1,23 +1,23 @@
 import { PageHeader } from "../about/page";
 import { CtaBand } from "../page";
-import Calculator from "./Calculator";
+import CalculatorTabs from "./CalculatorTabs";
 
 export const metadata = {
-  title: "Compound Interest Calculator — Dhanvega",
+  title: "Investment Calculators — Dhanvega",
   description:
-    "See how your money can grow over time with regular contributions and compounding returns.",
+    "Plan your wealth with our compound-interest and mutual-fund SIP step-up calculators.",
 };
 
 export default function CalculatorPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Free tool"
-        title="Compound interest calculator"
-        subtitle="See how consistent investing and the power of compounding can grow your wealth over time."
+        eyebrow="Free tools"
+        title="Investment calculators"
+        subtitle="Project your wealth with compound interest, or model a mutual-fund SIP with an annual step-up."
       />
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-        <Calculator />
+        <CalculatorTabs />
       </section>
       <CtaBand />
     </>

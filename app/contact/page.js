@@ -52,6 +52,17 @@ const details = [
       { text: "Follow us on Instagram" },
     ],
   },
+  {
+    icon: "facebook",
+    title: "Facebook",
+    lines: [
+      {
+        text: "Follow us on Facebook",
+        href: "https://www.facebook.com/profile.php?id=61586155263493",
+        external: true,
+      },
+    ],
+  },
 ];
 
 export default function Contact() {
@@ -78,7 +89,9 @@ export default function Contact() {
                 <div key={d.title} className="flex gap-4">
                   <div
                     className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${
-                      d.icon === "whatsapp" || d.icon === "instagram"
+                      d.icon === "whatsapp" ||
+                      d.icon === "instagram" ||
+                      d.icon === "facebook"
                         ? "bg-white ring-1 ring-navy-900/10"
                         : "bg-navy-900 text-gold-400"
                     }`}
