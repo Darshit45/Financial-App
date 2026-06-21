@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Icon from "../components/Icon";
 
-const inr = new Intl.NumberFormat("en-IN", {
+export const inr = new Intl.NumberFormat("en-IN", {
   style: "currency",
   currency: "INR",
   maximumFractionDigits: 0,
@@ -261,7 +261,7 @@ export default function Calculator() {
   );
 }
 
-function Chart({ yearly, maxBalance, years }) {
+export function Chart({ yearly, maxBalance, years }) {
   const W = 800;
   const H = 280;
   const pad = { top: 10, bottom: 28, left: 0, right: 0 };
@@ -323,7 +323,7 @@ function Chart({ yearly, maxBalance, years }) {
   );
 }
 
-function Stat({ label, value, dot }) {
+export function Stat({ label, value, dot }) {
   return (
     <div className="rounded-xl border border-white/10 bg-navy-800/60 p-3">
       <span className="flex items-center gap-1.5 text-xs text-cream/70">
@@ -337,7 +337,7 @@ function Stat({ label, value, dot }) {
   );
 }
 
-function MoneyField({ label, value, onChange }) {
+export function MoneyField({ label, value, onChange }) {
   return (
     <div>
       <label className="mb-1.5 block text-sm font-medium text-navy-800">
@@ -357,7 +357,7 @@ function MoneyField({ label, value, onChange }) {
   );
 }
 
-function SliderField({ label, value, onChange, min, max, step, suffix }) {
+export function SliderField({ label, value, onChange, min, max, step, suffix }) {
   return (
     <div>
       <div className="mb-1.5 flex items-center justify-between">

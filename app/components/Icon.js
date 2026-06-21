@@ -92,6 +92,15 @@ const brandIcons = {
       <circle cx="17.2" cy="6.8" r="1.2" fill="#fff" />
     </svg>
   ),
+  facebook: (className) => (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5.5" fill="#1877F2" />
+      <path
+        fill="#fff"
+        d="M13.2 19v-6.3h2.1l.32-2.45H13.2V8.7c0-.71.2-1.19 1.21-1.19h1.29V5.32c-.22-.03-.99-.09-1.88-.09-1.86 0-3.13 1.13-3.13 3.22v1.8H8.5v2.45h2.19V19h2.51z"
+      />
+    </svg>
+  ),
   gmail: (className) => (
     <svg className={className} viewBox="0 0 48 48" aria-hidden="true">
       <path

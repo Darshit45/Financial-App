@@ -122,6 +122,19 @@ export default function Footer() {
                   @dhruvifinfix
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61586155263493"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
+                >
+                  <span className="inline-grid h-5 w-5 shrink-0 place-items-center rounded bg-white">
+                    <Icon name="facebook" className="h-3.5 w-3.5" />
+                  </span>
+                  Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>
