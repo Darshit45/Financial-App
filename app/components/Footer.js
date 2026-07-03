@@ -33,7 +33,7 @@ export default function Footer() {
               <img
                 src="/logo-full.png"
                 alt="DhanVega Financial Services"
-                className="h-28 w-auto rounded-lg bg-white p-2"
+                className="h-16 w-auto rounded-lg bg-white p-2"
               />
             </Link>
             <p className="mt-3 font-serif text-sm italic text-gold-300">

@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* DhanVega brand navy, sampled from the logo (#052846) */
-  --color-navy-950: #031a2f;
-  --color-navy-900: #052846;
-  --color-navy-800: #0a3a63;
-  --color-navy-700: #114e83;
-  --color-navy-600: #1866a6;
-  /* Brand blue accent, sampled from the logo (#1e84cc) —
-     kept under the "gold-*" names for back-compat with existing classes */
-  --color-gold-700: #135a91;
-  --color-gold-600: #1a6fb2;
-  --color-gold-500: #1e84cc;
-  --color-gold-400: #4d9edb;
-  --color-gold-300: #a6cfef;
-  --color-cream: #f5f9fd;
+  /* Brand navy, sampled from the logo (#0e3d70)
+     (named "navy-*" for back-compat with existing classes) */
+  --color-navy-950: #062a4d;
+  --color-navy-900: #0b3a68;
+  --color-navy-800: #114b85;
+  --color-navy-700: #1a5fa5;
+  --color-navy-600: #2574c4;
+  /* Brand orange accent, sampled from the logo (#f6921e)
+     (named "gold-*" for back-compat with existing classes) */
+  --color-gold-700: #b56a06;
+  --color-gold-600: #d87f0d;
+  --color-gold-500: #f6921e;
+  --color-gold-400: #f8a94b;
+  --color-gold-300: #fbd096;
+  --color-cream: #f8f6f0;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
