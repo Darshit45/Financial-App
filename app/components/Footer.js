@@ -29,18 +29,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white">
-                <img src="/logo-mark.png" alt="" className="h-9 w-9" />
-              </span>
-              <span className="flex flex-col">
-                <span className="font-serif text-xl font-bold leading-none tracking-wide text-cream">
-                  DHANVEGA
-                </span>
-                <span className="mt-1 text-[0.55rem] font-semibold leading-none tracking-[0.22em] text-gold-400">
-                  — FINANCIAL SERVICES —
-                </span>
-              </span>
+            <Link href="/" className="inline-block">
+              <img
+                src="/logo-full.png"
+                alt="DhanVega Financial Services"
+                className="h-28 w-auto rounded-lg bg-white p-2"
+              />
             </Link>
             <p className="mt-3 font-serif text-sm italic text-gold-300">
               With You, For Every Tomorrow

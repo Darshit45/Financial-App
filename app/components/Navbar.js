@@ -36,29 +36,9 @@ export default function Navbar() {
           : "bg-white"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <Link
-          href="/"
-          aria-label="DhanVega Financial Services — Home"
-          className="flex items-center gap-2.5"
-        >
-          <img
-            src="/logo-mark.png"
-            alt=""
-            className="h-12 w-auto"
-          />
-          <span className="flex flex-col">
-            <span className="font-serif text-xl font-bold leading-none tracking-wide text-navy-900">
-              DHANVEGA
-            </span>
-            <span className="mt-1 text-[0.55rem] font-semibold leading-none tracking-[0.22em] text-gold-500">
-              — FINANCIAL SERVICES —
-            </span>
-          </span>
-        </Link>
-
-        {/* Desktop nav */}
-        <ul className="hidden items-center gap-8 md:flex">
+      <nav className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 py-2 lg:px-8">
+        {/* Left: nav links */}
+        <ul className="hidden items-center gap-6 md:flex lg:gap-8">
           {links.map((l) => {
             const active = pathname === l.href;
             return (
@@ -76,41 +56,51 @@ export default function Navbar() {
               </li>
             );
           })}
-          <li>
-            <Link
-              href="/contact"
-              className="rounded-full bg-gold-500 px-5 py-2 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400"
-            >
-              Book a Consultation
-            </Link>
-          </li>
         </ul>
+        <span className="md:hidden" aria-hidden="true" />
 
-        {/* Mobile toggle */}
-        <button
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-navy-900 md:hidden"
-        >
-          <div className="space-y-1.5">
-            <span
-              className={`block h-0.5 w-6 bg-current transition-transform ${
-                open ? "translate-y-2 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-current transition-opacity ${
-                open ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-current transition-transform ${
-                open ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            />
-          </div>
-        </button>
+        {/* Center: logo */}
+        <Link href="/" aria-label="DhanVega Financial Services — Home">
+          <img
+            src="/logo-full.png"
+            alt="DhanVega Financial Services"
+            className="h-16 w-auto"
+          />
+        </Link>
+
+        {/* Right: CTA (desktop) / menu toggle (mobile) */}
+        <div className="flex items-center justify-end">
+          <Link
+            href="/contact"
+            className="hidden rounded-full bg-navy-900 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy-700 md:inline-block"
+          >
+            Book a Consultation
+          </Link>
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+            className="flex h-10 w-10 items-center justify-center rounded-md text-navy-900 md:hidden"
+          >
+            <div className="space-y-1.5">
+              <span
+                className={`block h-0.5 w-6 bg-current transition-transform ${
+                  open ? "translate-y-2 rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transition-opacity ${
+                  open ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transition-transform ${
+                  open ? "-translate-y-2 -rotate-45" : ""
+                }`}
+              />
+            </div>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
