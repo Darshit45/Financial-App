@@ -30,11 +30,16 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-md bg-gold-500 font-serif text-lg font-bold text-navy-950">
-                D
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white">
+                <img src="/logo-mark.png" alt="" className="h-9 w-9" />
               </span>
-              <span className="font-serif text-xl font-semibold text-cream">
-                Dhan<span className="text-gold-400">vega</span>
+              <span className="flex flex-col">
+                <span className="font-serif text-xl font-bold leading-none tracking-wide text-cream">
+                  DHANVEGA
+                </span>
+                <span className="mt-1 text-[0.55rem] font-semibold leading-none tracking-[0.22em] text-gold-400">
+                  — FINANCIAL SERVICES —
+                </span>
               </span>
             </Link>
             <p className="mt-3 font-serif text-sm italic text-gold-300">
