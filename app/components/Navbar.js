@@ -64,7 +64,7 @@ export default function Navbar() {
           <img
             src="/logo-full.png"
             alt="DhanVega Financial Services"
-            className="h-16 w-auto"
+            className="h-14 w-auto"
           />
         </Link>
 
