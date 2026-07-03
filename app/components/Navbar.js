@@ -32,17 +32,28 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy-900/95 backdrop-blur shadow-lg shadow-navy-950/20"
-          : "bg-navy-900"
+          ? "bg-white/95 backdrop-blur shadow-lg shadow-navy-950/10"
+          : "bg-white"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-gold-500 font-serif text-lg font-bold text-navy-950">
-            D
-          </span>
-          <span className="font-serif text-xl font-semibold tracking-tight text-cream">
-            Dhan<span className="text-gold-400">vega</span>
+        <Link
+          href="/"
+          aria-label="DhanVega Financial Services — Home"
+          className="flex items-center gap-2.5"
+        >
+          <img
+            src="/logo-mark.png"
+            alt=""
+            className="h-12 w-auto"
+          />
+          <span className="flex flex-col">
+            <span className="font-serif text-xl font-bold leading-none tracking-wide text-navy-900">
+              DHANVEGA
+            </span>
+            <span className="mt-1 text-[0.55rem] font-semibold leading-none tracking-[0.22em] text-gold-500">
+              — FINANCIAL SERVICES —
+            </span>
           </span>
         </Link>
 
@@ -56,8 +67,8 @@ export default function Navbar() {
                   href={l.href}
                   className={`text-sm font-medium transition-colors ${
                     active
-                      ? "text-gold-400"
-                      : "text-cream/80 hover:text-gold-300"
+                      ? "text-gold-600"
+                      : "text-navy-800 hover:text-gold-600"
                   }`}
                 >
                   {l.label}
@@ -80,7 +91,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-cream md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-navy-900 md:hidden"
         >
           <div className="space-y-1.5">
             <span
@@ -104,7 +115,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-white/10 bg-navy-900 transition-[max-height] duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-navy-900/10 bg-white transition-[max-height] duration-300 md:hidden ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >
@@ -117,8 +128,8 @@ export default function Navbar() {
                   href={l.href}
                   className={`block rounded-md px-3 py-2.5 text-base font-medium ${
                     active
-                      ? "bg-white/5 text-gold-400"
-                      : "text-cream/80 hover:bg-white/5 hover:text-gold-300"
+                      ? "bg-navy-900/5 text-gold-600"
+                      : "text-navy-800 hover:bg-navy-900/5 hover:text-gold-600"
                   }`}
                 >
                   {l.label}
