@@ -4,11 +4,13 @@ import { useState } from "react";
 import Calculator from "./Calculator";
 import SipCalculator from "./SipCalculator";
 import SipReturnCalculator from "./SipReturnCalculator";
+import AssetAllocationCalculator from "./AssetAllocationCalculator";
 
 const tabs = [
   { id: "sipreturn", label: "SIP" },
   { id: "sip", label: "SIP Step-Up" },
   { id: "compound", label: "Compound Interest" },
+  { id: "allocation", label: "Asset Allocation" },
 ];
 
 export default function CalculatorTabs() {
@@ -37,6 +39,8 @@ export default function CalculatorTabs() {
         <SipReturnCalculator />
       ) : tab === "sip" ? (
         <SipCalculator />
+      ) : tab === "allocation" ? (
+        <AssetAllocationCalculator />
       ) : (
         <Calculator />
       )}
