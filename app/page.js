@@ -12,10 +12,15 @@ export default function Home() {
       <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-navy-900 text-cream">
         <HeroBackground />
         <div className="animate-fade-up relative px-5 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cream/80">
+          <h1 className="font-serif text-5xl font-semibold leading-tight text-cream sm:text-7xl">
             Dhanvega
+          </h1>
+          <div className="mx-auto mt-5 h-0.5 w-64 bg-cream/90 sm:w-[26rem]" />
+          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-cream/85 sm:text-base">
+            Personalized, research-backed wealth management that puts your
+            goals first.
           </p>
-          <p className="mt-4 font-serif text-3xl italic leading-tight text-gold-300 sm:text-5xl lg:text-6xl">
+          <p className="mt-6 font-serif text-2xl font-bold italic leading-tight text-gold-300 sm:text-4xl">
             With You, For Every Tomorrow
           </p>
           <div className="mt-12 flex justify-center">
