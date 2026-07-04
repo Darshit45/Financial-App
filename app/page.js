@@ -12,7 +12,10 @@ export default function Home() {
       <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-navy-900 text-cream">
         <HeroBackground />
         <div className="animate-fade-up relative px-5 text-center">
-          <p className="font-serif text-3xl italic leading-tight text-gold-300 sm:text-5xl lg:text-6xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cream/80">
+            Dhanvega
+          </p>
+          <p className="mt-4 font-serif text-3xl italic leading-tight text-gold-300 sm:text-5xl lg:text-6xl">
             With You, For Every Tomorrow
           </p>
           <div className="mt-12 flex justify-center">
@@ -28,7 +31,7 @@ export default function Home() {
       <section className="bg-cream">
         <div className="mx-auto max-w-3xl px-5 py-20 text-center lg:py-24">
           <span className="inline-block rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-600">
-            Truthful progress, real wealth
+            Accelerating financial growth
           </span>
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-tight text-navy-900 sm:text-5xl">
             Clarity in every <span className="text-gold-600">financial</span>{" "}
