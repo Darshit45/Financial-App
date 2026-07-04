@@ -7,7 +7,7 @@ const GOLD = "#c5a24c";
  * `dark` renders the light-on-navy variant for dark backgrounds.
  */
 export default function Logo({ dark = false, className = "" }) {
-  const ink = dark ? "#f8f5ee" : "#142840";
+  const ink = dark ? "#f8f5ee" : "#0c1c30";
   return (
     <span className={`inline-flex flex-col items-center ${className}`}>
       <svg

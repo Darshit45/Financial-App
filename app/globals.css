@@ -3,11 +3,11 @@
 @theme {
   /* Deep brand navy from the logo concept
      (named "navy-*" for back-compat with existing classes) */
-  --color-navy-950: #0b1a2e;
-  --color-navy-900: #132840;
-  --color-navy-800: #1b3757;
-  --color-navy-700: #264a75;
-  --color-navy-600: #315e94;
+  --color-navy-950: #060f1c;
+  --color-navy-900: #0c1c30;
+  --color-navy-800: #142942;
+  --color-navy-700: #1d3a5c;
+  --color-navy-600: #274b78;
   /* Antique gold accent from the logo concept (#c5a24c)
      (named "gold-*" for back-compat with existing classes) */
   --color-gold-700: #8f7434;
