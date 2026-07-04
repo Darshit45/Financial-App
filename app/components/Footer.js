@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Icon from "./Icon";
+import Logo from "./Logo";
 
 const cols = [
   {
@@ -30,11 +31,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
-              <img
-                src="/logo-full.png"
-                alt="DhanVega Financial Services"
-                className="h-16 w-auto rounded-lg bg-white p-2"
-              />
+              <Logo dark />
             </Link>
             <p className="mt-3 font-serif text-sm italic text-gold-300">
               With You, For Every Tomorrow

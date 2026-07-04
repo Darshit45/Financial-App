@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand navy, sampled from the logo (#0e3d70)
+  /* Deep brand navy from the logo concept
      (named "navy-*" for back-compat with existing classes) */
-  --color-navy-950: #062a4d;
-  --color-navy-900: #0b3a68;
-  --color-navy-800: #114b85;
-  --color-navy-700: #1a5fa5;
-  --color-navy-600: #2574c4;
-  /* Brand orange accent, sampled from the logo (#f6921e)
+  --color-navy-950: #0b1a2e;
+  --color-navy-900: #132840;
+  --color-navy-800: #1b3757;
+  --color-navy-700: #264a75;
+  --color-navy-600: #315e94;
+  /* Antique gold accent from the logo concept (#c5a24c)
      (named "gold-*" for back-compat with existing classes) */
-  --color-gold-700: #b56a06;
-  --color-gold-600: #d87f0d;
-  --color-gold-500: #f6921e;
-  --color-gold-400: #f8a94b;
-  --color-gold-300: #fbd096;
-  --color-cream: #f8f6f0;
+  --color-gold-700: #8f7434;
+  --color-gold-600: #ab8b3f;
+  --color-gold-500: #c5a24c;
+  --color-gold-400: #d4b56b;
+  --color-gold-300: #e6d3a1;
+  --color-cream: #f8f5ee;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
