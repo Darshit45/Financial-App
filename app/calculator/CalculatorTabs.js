@@ -3,14 +3,16 @@
 import { useState } from "react";
 import Calculator from "./Calculator";
 import SipCalculator from "./SipCalculator";
+import SipReturnCalculator from "./SipReturnCalculator";
 
 const tabs = [
-  { id: "compound", label: "Compound Interest" },
+  { id: "sipreturn", label: "SIP" },
   { id: "sip", label: "SIP Step-Up" },
+  { id: "compound", label: "Compound Interest" },
 ];
 
 export default function CalculatorTabs() {
-  const [tab, setTab] = useState("compound");
+  const [tab, setTab] = useState("sipreturn");
 
   return (
     <div>
@@ -31,7 +33,13 @@ export default function CalculatorTabs() {
         ))}
       </div>
 
-      {tab === "compound" ? <Calculator /> : <SipCalculator />}
+      {tab === "sipreturn" ? (
+        <SipReturnCalculator />
+      ) : tab === "sip" ? (
+        <SipCalculator />
+      ) : (
+        <Calculator />
+      )}
     </div>
   );
 }
