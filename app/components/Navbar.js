@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const links = [
   { href: "/", label: "Home" },
@@ -61,11 +62,7 @@ export default function Navbar() {
 
         {/* Center: logo */}
         <Link href="/" aria-label="DhanVega Financial Services — Home">
-          <img
-            src="/logo-full.png"
-            alt="DhanVega Financial Services"
-            className="h-14 w-auto"
-          />
+          <Logo />
         </Link>
 
         {/* Right: CTA (desktop) / menu toggle (mobile) */}
