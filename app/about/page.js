@@ -14,7 +14,7 @@ export default function About() {
     <>
       <PageHeader
         eyebrow="About us"
-        title="Built on truthful progress"
+        title="Accelerating financial growth"
         subtitle="We exist to help families make confident financial decisions — grounded in research, discipline, and complete transparency."
         video="about-hero.mp4"
       />
