@@ -10,10 +10,19 @@ import PpfCalculator from "./PpfCalculator";
 import EpfCalculator from "./EpfCalculator";
 import GoalCalculator from "./GoalCalculator";
 import CompositeGoalCalculator from "./CompositeGoalCalculator";
+import LumpsumCalculator from "./LumpsumCalculator";
+import LumpsumTargetCalculator from "./LumpsumTargetCalculator";
+import InflationCalculator from "./InflationCalculator";
+import HlvCalculator from "./HlvCalculator";
+import NetWorthCalculator from "./NetWorthCalculator";
+import SpendLessCalculator from "./SpendLessCalculator";
+import ChildEducationCalculator from "./ChildEducationCalculator";
 
 const tabs = [
   { id: "sipreturn", label: "SIP" },
   { id: "sip", label: "SIP Step-Up" },
+  { id: "lumpsum", label: "Lumpsum" },
+  { id: "lumpsumtarget", label: "Lumpsum Target" },
   { id: "compound", label: "Compound Interest" },
   { id: "allocation", label: "Asset Allocation" },
   { id: "retirement", label: "Retirement" },
@@ -21,11 +30,18 @@ const tabs = [
   { id: "epf", label: "EPF" },
   { id: "goal", label: "Goal Setting" },
   { id: "composite", label: "Composite Goals" },
+  { id: "education", label: "Children's Education" },
+  { id: "networth", label: "Net Worth" },
+  { id: "hlv", label: "Human Life Value" },
+  { id: "inflation", label: "Inflation" },
+  { id: "spendless", label: "Spend Less, Save More" },
 ];
 
 const panels = {
   sipreturn: SipReturnCalculator,
   sip: SipCalculator,
+  lumpsum: LumpsumCalculator,
+  lumpsumtarget: LumpsumTargetCalculator,
   compound: Calculator,
   allocation: AssetAllocationCalculator,
   retirement: RetirementCalculator,
@@ -33,6 +49,11 @@ const panels = {
   epf: EpfCalculator,
   goal: GoalCalculator,
   composite: CompositeGoalCalculator,
+  education: ChildEducationCalculator,
+  networth: NetWorthCalculator,
+  hlv: HlvCalculator,
+  inflation: InflationCalculator,
+  spendless: SpendLessCalculator,
 };
 
 export default function CalculatorTabs() {
