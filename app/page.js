@@ -13,14 +13,18 @@ export default function Home() {
         <HeroBackground />
         <div className="animate-fade-up relative px-5 text-center">
           <h1 className="font-serif text-5xl font-semibold leading-tight text-cream sm:text-7xl">
-            Dhanvega
+            {"Dhanvega".split("").map((ch, i) => (
+              <span key={i} className="hero-letter" style={{ "--i": i }}>
+                {ch}
+              </span>
+            ))}
           </h1>
-          <div className="mx-auto mt-5 h-0.5 w-64 bg-cream/90 sm:w-[26rem]" />
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-cream/85 sm:text-base">
+          <div className="hero-underline mx-auto mt-5 h-0.5 w-64 bg-cream/90 sm:w-[26rem]" />
+          <p className="hero-fade-desc mx-auto mt-6 max-w-xl text-sm leading-relaxed text-cream/85 sm:text-base">
             Personalized, research-backed wealth management that puts your
             goals first.
           </p>
-          <p className="mt-6 font-serif text-2xl font-bold italic leading-tight text-gold-300 sm:text-4xl">
+          <p className="hero-fade-tagline mt-6 font-serif text-2xl font-bold italic leading-tight text-gold-300 sm:text-4xl">
             With You, For Every Tomorrow
           </p>
           <div className="mt-12 flex justify-center">
