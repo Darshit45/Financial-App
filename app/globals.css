@@ -127,6 +127,128 @@ body {
   }
 }
 
+/* ---- Hero "Dhanvega" heading animation ------------------------------ */
+
+/* Letters cascade up out of a soft blur, one after another */
+@keyframes hero-letter {
+  from {
+    opacity: 0;
+    transform: translateY(0.55em);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Underline draws itself outward from the center */
+@keyframes hero-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Recurring gold wave travelling across the letters: each letter lifts
+   and glows as the shimmer passes through it */
+@keyframes hero-letter-shine {
+  0%,
+  14%,
+  100% {
+    color: var(--color-cream);
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  7% {
+    color: var(--color-gold-300);
+    text-shadow: 0 0 24px rgba(232, 207, 143, 0.5);
+    transform: translateY(-0.045em);
+  }
+}
+
+.hero-letter {
+  display: inline-block;
+  animation:
+    hero-letter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both,
+    hero-letter-shine 6.5s ease-in-out infinite;
+  animation-delay:
+    calc(var(--i) * 75ms),
+    calc(2s + var(--i) * 90ms);
+}
+
+.hero-underline {
+  position: relative;
+  transform-origin: center;
+  animation: hero-underline 0.9s 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Gold spark racing along the underline as the wave exits the word */
+@keyframes hero-spark {
+  0%,
+  46% {
+    left: -4%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  64% {
+    left: 100%;
+    opacity: 1;
+  }
+  67%,
+  100% {
+    left: 102%;
+    opacity: 0;
+  }
+}
+
+.hero-underline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  height: 3px;
+  width: 34px;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold-400) 55%,
+    #fdf3d3
+  );
+  box-shadow: 0 0 12px 2px rgba(232, 207, 143, 0.55);
+  opacity: 0;
+  animation: hero-spark 6.5s ease-in-out infinite;
+}
+
+/* Supporting copy enters in sequence after the letters land */
+.hero-fade-desc {
+  animation: fade-up 0.7s 1.15s ease-out both;
+}
+
+.hero-fade-tagline {
+  animation: fade-up 0.8s 1.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-letter,
+  .hero-underline,
+  .hero-fade-desc,
+  .hero-fade-tagline {
+    animation: none;
+  }
+  .hero-underline::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* ---- Ambient background animation ---------------------------------- */
 
 /* Slow-drifting aurora orbs */
